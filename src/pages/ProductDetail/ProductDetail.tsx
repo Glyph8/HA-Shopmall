@@ -10,8 +10,6 @@ export default function ProductDetail() {
 
   const product = getProduct(Number(id));
 
-  const [selectedOptions, set];
-
   return (
     <div>
       <h1>상품 상세 페이지</h1>
