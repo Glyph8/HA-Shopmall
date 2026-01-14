@@ -43,6 +43,7 @@ export const PRODUCTS: Product[] = [
     reviewCount: 89,
     isNew: true,
   },
+
   // 패션
   {
     id: 4,
@@ -94,6 +95,7 @@ export const PRODUCTS: Product[] = [
       { name: "사이즈", values: ["M", "L", "XL"] },
     ],
   },
+
   // 식품
   {
     id: 7,
@@ -120,6 +122,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.6,
     reviewCount: 178,
   },
+
   // 도서
   {
     id: 9,
@@ -145,6 +148,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.7,
     reviewCount: 234,
   },
+
   // 생활용품
   {
     id: 11,
@@ -153,7 +157,7 @@ export const PRODUCTS: Product[] = [
     category: "생활용품",
     image:
       "https://i.namu.wiki/i/y1_hDxd26nQ4wrjbtVpLwBkJ_vE1zmXaQcacdOYfvRrsRRzVUdyRtvJJ-z8YSYW8fzjxGdfxOmXpzLG3B9AX9g.webp",
-    description: "강력한흡입력의 무선 청소기입니다.",
+    description: "강력한 흡입력의 무선 청소기입니다.",
     stock: 40,
     rating: 4.5,
     reviewCount: 189,
