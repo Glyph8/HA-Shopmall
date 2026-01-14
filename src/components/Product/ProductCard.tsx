@@ -42,6 +42,11 @@ export default function ProductCard({ product }: ProductCardProps) {
         )}
       </div>
 
+      {/* 이미지 */}
+      <div className={styles.imageWrapper}>
+        <img src={product.image} alt={product.name} className={styles.image} />
+      </div>
+
       <div className={styles.info}>
         <p className={styles.category}>{product.category}</p>
         <h3 className={styles.name}>{product.name}</h3>
