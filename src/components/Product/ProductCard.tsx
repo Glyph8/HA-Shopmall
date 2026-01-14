@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import type { Product } from "../../types";
 import styles from "./ProductCard.module.css";
-import { RenderStars } from "./Rating";
+import { Rating } from "./Rating";
 
 interface ProductCardProps {
   product: Product;
@@ -10,27 +10,26 @@ interface ProductCardProps {
 export default function ProductCard({ product }: ProductCardProps) {
   const formattedPrice = product.price.toLocaleString("ko-KR");
 
-  const renderStars = () => {
-    const fullStars = Math.floor(product.rating);
-
-    const stars = [];
-    for (let i = 0; i < 5; i++) {
-      if (i < fullStars) {
-        stars.push(
-          <span key={i} className={styles.star}>
-            ⭐
-          </span>
-        );
-      } else {
-        stars.push(
-          <span key={i} className={styles.starEmpty}>
-            ☆
-          </span>
-        );
-      }
-    }
-    return stars;
-  };
+  // const renderStars = () => {
+  //   const fullStars = Math.floor(product.rating);
+  //   const stars = [];
+  //   for (let i = 0; i < 5; i++) {
+  //     if (i < fullStars) {
+  //       stars.push(
+  //         <span key={i} className={styles.star}>
+  //           ⭐
+  //         </span>
+  //       );
+  //     } else {
+  //       stars.push(
+  //         <span key={i} className={styles.starEmpty}>
+  //           ☆
+  //         </span>
+  //       );
+  //     }
+  //   }
+  //   return stars;
+  // };
 
   return (
     <Link to={`/products/${product.id}`} className={styles.card}>
@@ -54,7 +53,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           </span>
         </div> */}
 
-        <RenderStars product={product} />
+        <Rating product={product} />
         <p className={styles.price}>{formattedPrice}원</p>
       </div>
     </Link>

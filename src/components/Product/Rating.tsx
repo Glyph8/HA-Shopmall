@@ -5,7 +5,7 @@ interface RenderStarsProps {
   product: Product;
 }
 
-export const RenderStars = ({ product }: RenderStarsProps) => {
+export const Rating = ({ product }: RenderStarsProps) => {
   const fullStars = Math.floor(product.rating);
 
   const stars = [];
