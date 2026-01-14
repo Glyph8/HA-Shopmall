@@ -1,4 +1,4 @@
-import { createContext, useState, useContext, ReactNode } from "react";
+import { createContext, useState, useContext, type ReactNode } from "react";
 import type { Product, Category, FilterState } from "../types";
 import { PRODUCTS } from "../data/products";
 
@@ -65,6 +65,7 @@ export function ProductProvider({ children }: ProductProviderProps) {
     <ProductContext.Provider value={value}>{children}</ProductContext.Provider>
   );
 }
+// eslint-disable-next-line react-refresh/only-export-components
 export function useProducts() {
   const context = useContext(ProductContext);
   if (context === undefined) {

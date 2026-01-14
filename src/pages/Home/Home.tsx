@@ -1,9 +1,9 @@
 import { useProducts } from "../../contexts/ProductContext";
-import ProductCard from "../../components/ProductCard/ProductCard";
 import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
 
 import type { Category } from "../../types";
+import ProductCard from "../../components/Product/ProductCard";
 export default function Home() {
   const { getBestProducts, getNewProducts } = useProducts();
   const bestProducts = getBestProducts();
@@ -61,4 +61,3 @@ export default function Home() {
     </div>
   );
 }
-
