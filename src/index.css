@@ -1,0 +1,31 @@
+:root {
+  font-family: "Segoe UI", sans-serif;
+}
+/* Light Theme (기본) */
+body.light {
+  background-color: #f5f7fa;
+  color: #2c3e50;
+}
+/* Dark Theme */
+body.dark {
+  background-color: #1a1a2e;
+  color: #eaeaea;
+}
+body.dark input,
+body.dark select,
+body.dark textarea {
+  background-color: #16213e;
+  color: #eaeaea;
+  border-color: #0f3460;
+}
+body.dark button {
+  background-color: #0f3460;
+}
+body.dark button:hover {
+  background-color: #16213e;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
