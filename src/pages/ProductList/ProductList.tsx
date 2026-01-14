@@ -3,10 +3,11 @@ import { useProducts } from "../../contexts/ProductContext";
 import styles from "./ProductList.module.css";
 import { useEffect, useState } from "react";
 import { type Category, type FilterState } from "../../types";
-import ProductCard from "../../components/ProductCard/ProductCard";
+import ProductCard from "../../components/Product/ProductCard";
 
 function ProductList() {
-  const { filterProducts, products } = useProducts();
+  // const { filterProducts, products } = useProducts();
+  const { filterProducts } = useProducts();
   const [searchParams] = useSearchParams();
 
   // 필터 상태
@@ -21,6 +22,7 @@ function ProductList() {
   useEffect(() => {
     const category = searchParams.get("category") as Category;
     if (category) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setFilters((prev) => ({ ...prev, category }));
     }
   }, [searchParams]);
