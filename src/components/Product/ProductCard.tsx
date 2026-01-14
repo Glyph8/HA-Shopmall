@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import type { Product } from "../../types";
 import styles from "./ProductCard.module.css";
+import { RenderStars } from "./Rating";
 
 interface ProductCardProps {
   product: Product;
@@ -46,13 +47,14 @@ export default function ProductCard({ product }: ProductCardProps) {
         <p className={styles.category}>{product.category}</p>
         <h3 className={styles.name}>{product.name}</h3>
 
-        <div className={styles.rating}>
+        {/* <div className={styles.rating}>
           {renderStars()}
           <span className={styles.ratingText}>
             {product.rating}({product.reviewCount})
           </span>
-        </div>
+        </div> */}
 
+        <RenderStars product={product} />
         <p className={styles.price}>{formattedPrice}원</p>
       </div>
     </Link>
